@@ -1,0 +1,274 @@
+@font-face {
+  font-family: "Inter";
+  src: url(./assets/fonts/inter-police.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", 'Times New Roman', Times, serif;
+}
+
+/* j'aurais pu mettre un paddin de 5 pour tous 
+et mettre "list-style: none; ici pour tous les li */
+
+body {
+  background: rgb( 29, 29, 29);
+  color: rgb(236, 236, 236);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  /* à retenir ! utiliser les vh pour la taille du BODYYYYY !!! */
+  justify-content: space-between;
+}
+
+/* --------------------------------------------------------------- */
+/* CSS BALISE NAV */
+
+nav {
+  display: flex;
+  /* margin: 20px 20px; */
+  justify-content: space-between;
+  font-size: 1.1rem;
+  align-items: center;
+  padding: 10px 20px;
+}
+/* il a utilisé le space-between pour séparer le titre des li */
+
+h2 {
+  font-size: 1.5rem;
+  width: 20%;
+  letter-spacing: 1px;
+}
+
+nav ul {
+  display: flex;
+  width: 50%;
+  /* margin-left: 0; */
+  justify-content: space-between;
+}
+
+li {
+  list-style: none;
+  width: 33.333%;
+  text-align: right;
+}
+
+/* --------------------------------------------------------------- */
+/* CSS HEADER */
+
+.header {
+  display: flex;
+  justify-content: space-around;
+  /* space-around met les éléments côte à côte */
+  align-items: center;
+  /* align center pour ler aligner verticalement */
+  margin: 40px auto;
+}
+
+/* Header Left------------------------- */
+
+.header-left {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin-left: 20px;
+} 
+
+
+h1 {
+  font-size: 5rem;
+  letter-spacing: 1px;
+}
+
+h3 {
+  color: rgb( 71, 77,255);
+  font-size: 1.8rem;
+  padding-top: 15px;
+  padding-bottom: 7px;
+  letter-spacing: 1px;
+}
+
+
+/* Header Right------------------------- */
+
+.header-right {
+  width: 50%;
+}
+
+#modem {
+  /* ici le display: block m'a permis de mettre l'image à droite */
+  display: block;
+  width: 88%;
+  min-width: 250px;
+  float: right;
+  margin-right: 15px;
+  /* width: 100%; */
+}
+  
+
+
+/* --------------------------------------------------------------- */
+/* CSS PARTIE INFOS */
+
+/* Global------------------------- */
+.infos {
+  display: flex;
+  margin: 15px;
+  padding: 15px;
+  background: black;
+  border-radius: 10px;
+}
+
+.infos h3 {
+  padding-top: 0;
+  font-size: 1.1rem;
+  color: white;
+  letter-spacing: 1px;
+}
+
+
+/* Infos-left------------------------- */
+
+.infos-left {
+  width: 30%;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  /* margin-left: 4px; */
+}
+
+button {
+  background: rgb( 71, 77,255);
+  color: white;
+  /* font-family: "Inter-Bold"; */
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 0.9rem;
+  padding: 10px 0;
+  margin: 5px;
+  border: 1px solid blue;
+  border-radius: 10px;
+  width: 150px;
+  
+}
+
+
+/* Infos-right------------------------- */
+
+.infos-right {
+  width: 70%;
+}
+
+.img-container {
+  display: flex;
+  /* lui a mis le flex sur .investors aussi */
+  justify-content: space-around;
+  margin-top: 35px;
+
+}
+
+.infos-right img {
+  height: 50px;
+}
+
+
+
+/* RESPONSIVE */
+/* Media-query */
+
+@media screen and (max-width: 1290px) {
+  #modem {
+    width: 100%;
+  }
+}
+
+
+@media screen and (max-width: 1260px) {
+  .header {
+    flex-direction: column;
+  }
+  .header-left {
+    width: 80%;
+    margin: 15px;
+    align-items: center;
+    text-align: center;
+  }  
+  .header-right {
+    width: 50%;
+  }
+  #modem {
+    margin-top: 30px;
+    float: none;
+    min-width: 50px;
+  }
+}
+
+
+@media screen and (max-width: 900px) { 
+  .header-right {
+    width: 50%;
+  }
+}
+
+
+@media screen and (max-width: 770px) {
+  h1 {
+    font-size: 3rem;
+  }
+  .header-left {
+    width: 80%;
+  }
+  nav ul {
+    width: 80%;
+  }
+  .header-left h3 {
+    font-size: 1.2rem;
+  }
+}
+
+
+@media screen and (max-width: 700px) {
+  .infos {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    /* a permis de centrer les titres si text-align: center */
+  }
+  .infos-left {
+    width: 80%;
+    text-align: center;
+  }
+    .btn-container {
+    align-items: center;
+  }
+  .infos-right {
+    margin-top: 20px;
+    width: 80%;
+    text-align: center;
+  }
+}
+
+
+@media screen and (max-width:530px) {
+  .infos-right img {
+    height: 40px;
+  }  
+    nav ul {
+    font-size: 1rem;
+  }
+}
+
+
+@media screen and (max-width:470px) {
+  .infos-right img {
+    height: 30px;
+  }  
+  nav ul {
+    font-size: 0.9rem;
+  }
+}

@@ -1,9 +1,102 @@
 <!DOCTYPE html>
 <html lang="fr">
+  <!-- Penser à changer la langue -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cours - SEO</title>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- Les balises Title et Meta apparaissent dans le résultat de recherche Google -->
+
+    <!-- La balise "title" supporte jusqu'à 70 caractères -->
+    <!-- Ne pas éviter d'en mettre car permet un bon référencement -->
+    <title>
+      Helium - La révolution numérique des modems nouvelle génération
+    </title>
+
+    <!-- La description du site = premières lignes affichées par google -->
+    <meta
+      name="description"
+      content="Tout savoir sur Helium, le modem ultra rapide nouvelle génération qui va révolutionner l'internet 3.0 et notre approche des technologies."
+    />
+
+    <!-- Open Graph : sert à être plus visible sur les réseaux -->
+    <meta property="og:title" content="Helium" />
+    <meta property="og:type" content="video.movie" />
+    <meta property="og:url" content="https://www.imdb.com/title/tt0117500/" />
+    <meta property="og:image" content="image-helium.png" />
+    <meta
+      name="og:description"
+      content="Tout savoir sur Helium, le modem ultra rapide nouvelle génération qui va révolutionner l'internet 3.0 et notre approche des technologies."
+    />
+
+    <link rel="stylesheet" href="tp1-css-style.css" />
   </head>
-  <body></body>
+
+  <body>
+    <nav>
+      <h2>Helium</h2>
+      <ul>
+        <li>5G</li>
+        <li>Explorer</li>
+        <li>Ecosystem</li>
+      </ul>
+    </nav>
+
+    <section class="header">
+      <div class="header-left">
+        <div class="header-left-container">
+          <!-- Le h1 doit être le plus haut possible et dire de quoi on parle -->
+          <h1>People-Powered Networks</h1>
+          <h3>Start a Wireless Revolution</h3>
+          <!-- Le <p> aide le robot à comprendre le contenu -->
+          <!-- Le robot de Google aime bien que l'on mette en valeur certains mots en <strong> ou <em>-->
+          <p>
+            Lorem ipsum dolor
+            <strong>sit amet consectetur adipisicing</strong> elit. Tempora
+            aliquid pariatur quae placeat veniam ratione repellendus
+            <em>obcaecati atque quibusdam non!</em>
+          </p>
+        </div>
+      </div>
+      <div class="header-right">
+        <!-- Le robot de Google aime bien les atl développée et explicites -->
+        <!-- L'image doit être optimisée dans sa taille et son format (WebP) (+ ne dépasse pas de son contenant) -->
+        <img
+          src="./assets/img/main.png"
+          id="modem"
+          alt="modem helium décomposé en 3D"
+        />
+      </div>
+
+      <!-- Pour le grid on sort l'image de la div : -->
+      <!-- <img
+        class="header-right"
+        src="./assets/img/main.png"
+        id="modem"
+        alt="modem"
+      /> -->
+    </section>
+
+    <section class="infos">
+      <div class="infos-left">
+        <h3>Core Technologies</h3>
+        <div class="btn-container">
+          <button>Tokens</button>
+          <button>Proof of Coverage</button>
+          <button>LongFi</button>
+        </div>
+      </div>
+      <div class="infos-right">
+        <h3>Our Investors</h3>
+        <div class="investors">
+          <div class="img-container">
+            <img src="./assets/img/investlogo2blue.png" alt="investor-1" />
+            <img src="./assets/img/investlogo3blue.png" alt="investor-2" />
+            <img src="./assets/img/investlogo4blue.png" alt="investor-3" />
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
